@@ -10,9 +10,9 @@ Would you like to know when the sun sets or rises in a given city? You can compa
 
 The **MVP** will cover the following:
 
-- **Homepage:** The homepage will present....
-- **My Kitchen:** A user will be able to look for two zones sunset and sunrise, see useful comparative information and have a handful link to wikipedia and google maps.
-- **FAQ:** Everything you always wanted to know about ***When does the sun sets or rises in a given city?*** but didn't dare to ask.
+- **Homepage:** The homepage will present for two preselected cities the sunset and sunrise information comparing both cities difference and adding a google map for each city. When clicking on the google map a new browser tab will appear with the map. Additionally in the city name you could click and again a new browser tab will appear with wikipedia information about the city.
+- **FAQ:** Everything you always wanted to know about ***When does the sun sets or rises in a given city?*** but didn't dare to 
+- **About:** Credits for Sunset and sunrise API, Google maps and wikipedia as well as some info about the author.
 - **Signup:** New users must register first.
 - **Login:** Existing users sign in form.
 
