@@ -43,6 +43,24 @@ The **MVP** will cover the following:
     - img/
     - fonts/
 
+
+
+## **Wireframe**
+
+ ![First page - Sign up](/Users/andreumartineznuevo/OneDrive/Andreu/Ironhack/course/First project DOC/sunseterisecity/First page - Sign up.png)
+
+
+
+## ![Second page - Sign in](/Users/andreumartineznuevo/OneDrive/Andreu/Ironhack/course/First project DOC/sunseterisecity/Second page - Sign in.png)
+
+
+
+![Third page - Home page](/Users/andreumartineznuevo/OneDrive/Andreu/Ironhack/course/First project DOC/sunseterisecity/Third page - Home page.png)
+
+
+
+![Fourth page - FAQs and About](/Users/andreumartineznuevo/OneDrive/Andreu/Ironhack/course/First project DOC/sunseterisecity/Fourth page - FAQs and About.png)
+
 ## Links
 
 ### Trello
