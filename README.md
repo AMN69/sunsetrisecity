@@ -47,10 +47,12 @@ The **MVP** will cover the following:
 
 ## **Wireframe**
 
- ![](img/First page - Sign up.png)
- ![](img/Second page - Sign in.png)
- ![](img/Third page - Home page.png)
- ![](img/Fourth page - FAQs and About.png)
+<img src="./img/First page - Sign up.png" />
+<img src="./img/Second page - Sign in.png" />
+<img src="./img/Third page - Home page.png" />
+<img src="./img/Fourth page - FAQs and About.png" />
+
+## 
 
 ## Links
 
