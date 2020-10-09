@@ -1,5 +1,7 @@
 ## README.md
 
+<img src="./assets/img/Logo sunsetrisecity.jpeg" />
+
 # When does the sun sets or rises in a given city?
 
 Would you like to know when the sun sets or rises in a given city? You can compare now two cities sun setting and raising easily. Why? Maybe you are planning to travel there and want to compare timezones. Or maybe you have a friend or colleague and need to call him avoiding doing it when they are sleeping, having lunch or whatever. You are then in the right place because this app compares two cities timezones and allows you to get more info about them. 
@@ -14,7 +16,7 @@ The **MVP** will cover the following:
 - **FAQ:** Everything you always wanted to know about ***When does the sun sets or rises in a given city?*** but didn't dare to 
 - **About:** Credits for Sunset and sunrise API, Google maps and wikipedia as well as some info about the author.
 - **Signup:** New users must register first.
-- **Login:** Existing users sign in form.
+- **Signin:** Existing users sign in form.
 
 ## Backlog
 
@@ -27,17 +29,16 @@ The **MVP** will cover the following:
 
 - root/
   - index.html
-  - sunsetrise.html
   - faq.html
+  - about.html
   - signup.html
   - signin.html
   - css/
     - style.css
   - js/
     - main.js
-    - Signup.js
-    - Signin.js
-    - Bla...
+    - signup.js
+    - signin.js
     - sunsetriseApi.js
   - assets/
     - img/
@@ -47,10 +48,10 @@ The **MVP** will cover the following:
 
 ## **Wireframe**
 
-<img src="./img/First page - Sign up.png" />
-<img src="./img/Second page - Sign in.png" />
-<img src="./img/Third page - Home page.png" />
-<img src="./img/Fourth page - FAQs and About.png" />
+<img src="./assets/img/First page - Sign up.png" />
+<img src="./assets/img/Second page - Sign in.png" />
+<img src="./assets/img/Third page - Home page.png" />
+<img src="./assets/img/Fourth page - FAQs and About.png" />
 
 ## 
 
