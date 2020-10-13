@@ -31,7 +31,7 @@ h1 {
     /* Navegation-starts */
 
 .nav-div {
-    margin: 2.5% 2.5% 2.5% 2.5%;
+    padding: 2.5% 2.5% 0% 2.5%;
     display: flex;
     flex-direction: row;
 }
@@ -162,6 +162,9 @@ li {
     width: 25%;
     margin: 5.5% 4.16% 2% 4.16%;
     font-size: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -256,6 +259,9 @@ li {
         width: 80%;
         margin: 2% 10%;
         font-size: 2rem;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
 }
 
 @media (min-width: 376) and (max-width: 768px) { /* For tablet 768px*/
