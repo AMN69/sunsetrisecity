@@ -40,6 +40,8 @@ The **MVP** will cover the following:
     - signup.js
     - signin.js
     - sunsetriseApi.js
+    - user.js
+    - database.js
   - assets/
     - img/
     - fonts/
