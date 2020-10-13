@@ -240,10 +240,26 @@ li {
         /* justify-content: center;
         flex-direction: row; */
     }
+
+    .main-div {
+        display: flex;
+        flex-direction: column;
+    }
     
+    .city1-data, .city2-data {
+        width: 80%;
+        margin: 2% 10%;
+        font-size: 2rem;
+    }
+    
+    .diffs-data {
+        width: 80%;
+        margin: 2% 10%;
+        font-size: 2rem;
 }
 
 @media (min-width: 376) and (max-width: 768px) { /* For tablet 768px*/
+    
     html {
         font-size: 8px;
     }
@@ -296,6 +312,23 @@ li {
         display: inline;
         /* justify-content: center;
         flex-direction: row; */
+    }
+
+    .main-div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .city1-data, .city2-data {
+        width: 80%;
+        margin: 2% 10%;
+        font-size: 2rem;
+    }
+    
+    .diffs-data {
+        width: 80%;
+        margin: 2% 10%;
+        font-size: 2rem;
     }
 } 
 

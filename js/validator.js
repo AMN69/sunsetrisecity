@@ -29,6 +29,9 @@ class Validator {
     // RegEx (regular expression) is a method to validate for example the email.
     isEmailValid = (email) => {
         const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+        // metodo `test` prueba si la cadena cumple las reglas
+        // y devuelve `true` o `false`
         const isValid = emailRegEx.test(email);  
         return isValid;
     }
@@ -36,23 +39,23 @@ class Validator {
     // We add or remove the error depending whether the email is unique or not.
     validateUniqueEmail = (newEmail) => {
 
+        console.log('email:', newEmail);
         const userDb = db.getAllUsers();
+
+        let emailUnique = true;
         
-        if (userDb) {
-        
-            let emailUnique = true;
-            
-            userDb.forEach(user => {
+        if (userDb.length > 0) {
+            userDb.forEach((user) => {
                 if (user.email == newEmail) {
                     emailUnique = false;
                 }
             });
-
-            if (emailUnique) {
-                delete this.errors.emailExistsError;
-            } else {
-                this.errors.emailExistsError = this.emailExistsError;
-            }
+        console.log('Emailunique:', emailUnique);
+        if (emailUnique) {
+            delete this.errors.emailExistsError;
+        } else {
+            this.errors.emailExistsError = this.emailExistsError;
+        }
         }
     }
 
