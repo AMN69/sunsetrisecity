@@ -8,7 +8,7 @@
 class Database {
 
     // from the local storage we get a string and convert it to an array.
-    getAllUsers () {
+    getAllUsers = () => {
         const usersStr = localStorage.getItem('users');
         const usersArr = JSON.parse(usersStr);
 
@@ -21,7 +21,7 @@ class Database {
 
     // from 'this' Database we get all the users in an array, add the new one, and 
     // convert them to an string to save back to the Db the new user added.
-    saveNewUser (newUser) {
+    saveNewUser = (newUser) => {
         const usersArr = this.getAllUsers();
         usersArr.push(newUser);
         const userStr = JSON.stringify(usersArr);

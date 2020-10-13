@@ -18,7 +18,7 @@ class Validator {
     }
 
     // We add or remove the error depending whether the email is valid or not.
-    validateValidEmail (email) {
+    validateValidEmail = (email) => {
         if (this.isEmailValid(email)) {
             delete this.errors.invalidEmailError;
         } else {
@@ -27,22 +27,22 @@ class Validator {
     }
     
     // RegEx (regular expression) is a method to validate for example the email.
-    isEmailValid (email) {
+    isEmailValid = (email) => {
         const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
         const isValid = emailRegEx.test(email);  
         return isValid;
     }
 
     // We add or remove the error depending whether the email is unique or not.
-    validateUniqueEmail (newEmail) {
+    validateUniqueEmail = (newEmail) => {
 
         const userDb = db.getAllUsers();
         
         if (userDb) {
         
             let emailUnique = true;
-        
-            userDb.array.forEach(user => {
+            
+            userDb.forEach(user => {
                 if (user.email == newEmail) {
                     emailUnique = false;
                 }
@@ -56,7 +56,7 @@ class Validator {
         }
     }
 
-    validatePassword (pass) {
+    validatePassword = (pass) => {
         if (pass.length > 5) {
             delete this.errors.passwordError;
         } else {
@@ -64,7 +64,7 @@ class Validator {
         }
     }
 
-    validatePassRepeat (pass, repeatPass) {
+    validatePassRepeat = (pass, repeatPass) => {
         if (pass == repeatPass) {
             delete this.errors.repeatPassError;
         } else {
@@ -72,11 +72,11 @@ class Validator {
         }
     }
 
-    getErrors () {
+    getErrors = () => {
         return this.errors;
     }
 
-    resetValidator () {
+    resetValidator = () => {
         this.errors = {
             invalidEmailError : this.invalidEmailError,
             passwordError : this.passwordError,

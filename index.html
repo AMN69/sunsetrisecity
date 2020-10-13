@@ -4,8 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <nav class="nav-section">
+            <div class="nav-div">
+                <img src="/Users/andreumartineznuevo/OneDrive/Andreu/Ironhack/course/sunsetrisecity/assets/img/Logo sunsetrisecity.jpeg" alt="logo image" />
+                <ul class="nav-ul">
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="index.html">Main</a>
+                      <a class="dropdown-item" href="about.html">About</a>
+                      <a class="dropdown-item" href="faq.html">FAQs</a>
+                      <a class="dropdown-item" href="signup.html">Sign Up</a>
+                      <a class="dropdown-item" href="signin.html">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+    </header>
+    <section>
+    </section>
+    <section class="main-section">
+        <div class="main-div">
+            <div class="city1-data">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">City 1</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">Barcelona</option>
+                        <option value="2">Madrid</option>
+                        <option value="3">Paris</option>
+                    </select>
+                </div>          
+                <p class="current-time">Current time: `${ctime1}`</p>
+                <p class="sunrise">Sunrise: `${srtime1}`</p>
+                <p class="sunset">Sunset: `${sstime1}`</p>
+                <p class="solarnoon">Solar noon: `${sntime1}`</p>
+                <p class="daylength">Day length: `${dltime1}`</p>
+                <p class="twilightbeg">Twilight begins `${ctime1}`</p>
+                <p class="twilightend">Twilight ends `${ctime1}`</p>
+                <div>
+                    <iframe src="https://www.google.com/maps/search/?api=1&query=Girona"
+                        class="map-frame"
+                        frameborder="0"
+                        style="border:0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="diffs-data">
+                <p class="d-current-time">`${d-ctime}`</p>
+                <p class="d-sunrise">`${d-srtime}`</p>
+                <p class="d-sunset">`${d-sstime}`</p>
+                <p class="d-solarnoon">`${d-sntime}`</p>
+                <p class="d-daylength">`${d-dltime}`</p>
+                <p class="d-twilightbeg">`${d-ctime}`</p>
+                <p class="d-twilightend">`${d-ctime}`</p>
+            </div>
+            <div class="city2-data">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">City 2</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">London</option>
+                        <option value="2">Seville</option>
+                        <option value="3">Rome</option>
+                    </select>
+                </div> 
+                <p class="current-time">Current time: `${ctime2}`</p>
+                <p class="sunrise">Sunrise: `${srtime2}`</p>
+                <p class="sunset">Sunset: `${sstime2}`</p>
+                <p class="solarnoon">Solar noon: `${sntime2}`</p>
+                <p class="daylength">Day length: `${dltime2}`</p>
+                <p class="twilightbeg">Twilight begins `${ctime2}`</p>
+                <p class="twilightend">Twilight ends `${ctime2}`</p>
+                <div>
+                    <iframe src="https://www.google.com/maps/search/?api=1&query=Girona"
+                        class="map-frame"
+                        frameborder="0"
+                        style="border:0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/signup.js"></script>
+        <script src="js/user.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/validator.js"></script>
 </body>
 </html>
