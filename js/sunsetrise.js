@@ -258,6 +258,14 @@ renderDiff = () => {
   document.querySelector('.d-tetime').innerText = twilightEndDiff;
 };
 
+function renderCity1map(city, country) {
+  document.querySelector('.map-frame1').setAttribute("src", "https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey=8h5lXXll3zO_hFQT2b_jH8x9NOGoi5OjhgQ3w8JBVYA&co=" + country + "&ci=" + city);
+}
+
+function renderCity2map(city, country) {
+  document.querySelector('.map-frame2').setAttribute("src", "https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey=8h5lXXll3zO_hFQT2b_jH8x9NOGoi5OjhgQ3w8JBVYA&co=" + country + "&ci=" + city);
+}
+
 handleCity1Input = (event) => {
   const city1Input = event.target.value;
   //console.log('City1Input: ', city1Input);
@@ -274,7 +282,7 @@ handleCity1Input = (event) => {
     i++;
   }
   //console.log("City1Index: ", city1Index);
-
+  renderCity1map(cityLatLong[city1Index].cityname, cityLatLong[city1Index].cityCountry);
   getLatLon(cityLatLong[city1Index].cityLat, cityLatLong[city1Index].cityLon, 1);
   //city1map();
   //console.log("Back from API: ", apiListCity1);
@@ -333,6 +341,7 @@ handleCity2Input = (event) => {
     }
     i++;
   }
+  renderCity2map(cityLatLong[city2Index].cityname, cityLatLong[city2Index].cityCountry);
   getLatLon(cityLatLong[city2Index].cityLat, cityLatLong[city2Index].cityLon, 2);
 
   // renderInfoCity1(apiListCity1);

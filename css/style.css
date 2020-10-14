@@ -174,8 +174,7 @@ li {
     font-size: 2rem;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 .input-group {
@@ -183,6 +182,18 @@ li {
 }
 
 /* Main cities ends*/
+
+/* Map starts */
+
+.map {
+    border: 1mm solid #555555;
+}
+
+.map, .map-frame1, .map-frame2 {
+    background-color: #D9E4DD;
+}
+
+/* Map ends */
 
 
 
@@ -217,6 +228,7 @@ li {
 
     .dropdown {
         display: block;
+        padding-right: 10%;
     }
 
     .dropdown-menu, .dropdown-item {
@@ -276,6 +288,15 @@ li {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
+    }
+
+    .map {
+        border: 1mm solid #555555;
+    }
+
+    .map-frame1, .map-frame2 {
+        width: 80%;
+    }
 }
 
 @media (min-width: 376) and (max-width: 768px) { /* For tablet 768px*/
