@@ -50,13 +50,13 @@
                         <option value="3">Paris</option>
                     </select>
                 </div>          
-                <p class="current-time">Current time: `${ctime1}`</p>
-                <p class="sunrise">Sunrise: `${srtime1}`</p>
-                <p class="sunset">Sunset: `${sstime1}`</p>
-                <p class="solarnoon">Solar noon: `${sntime1}`</p>
-                <p class="daylength">Day length: `${dltime1}`</p>
-                <p class="twilightbeg">Twilight begins `${tbtime1}`</p>
-                <p class="twilightend">Twilight ends `${tetime1}`</p>
+                <p class="current-time ctime1">Current time: `${ctime1}`</p>
+                <p class="sunrise srtime1">Sunrise: `${srtime1}`</p>
+                <p class="sunset sstime1">Sunset: `${sstime1}`</p>
+                <p class="solarnoon sntime1">Solar noon: `${sntime1}`</p>
+                <p class="daylength dltime1">Day length: `${dltime1}`</p>
+                <p class="twilightbeg tbtime1">Twilight begins: `${tbtime1}`</p>
+                <p class="twilightend tetime1">Twilight ends: `${tetime1}`</p>
                 <div>
                     <!-- https://stackoverflow.com/questions/15388897/google-maps-inside-iframe-not-loading -->
                     <iframe src="https://www.google.com/maps/search/?api=1&query=Girona"
@@ -68,13 +68,13 @@
                 </div>
             </div>
             <div class="diffs-data">
-                <p class="d-current-time"><--`${d-ctime}`--></p>
-                <p class="d-sunrise"><--`${d-srtime}`--></p>
-                <p class="d-sunset"><--`${d-sstime}`--></p>
-                <p class="d-solarnoon"><--`${d-sntime}`--></p>
-                <p class="d-daylength"><--`${d-dltime}`--></p>
-                <p class="d-twilightbeg"><--`${d-tbtime}`--></p>
-                <p class="d-twilightend"><--`${d-tetime}`--></p>
+                <p class="d-current-time d-ctime"><--`${d-ctime}`--></p>
+                <p class="d-sunrise d-srtime"><--`${d-srtime}`--></p>
+                <p class="d-sunset d-sstime"><--`${d-sstime}`--></p>
+                <p class="d-solarnoon d-sntime"><--`${d-sntime}`--></p>
+                <p class="d-daylength d-dltime"><--`${d-dltime}`--></p>
+                <p class="d-twilightbeg d-tbtime"><--`${d-tbtime}`--></p>
+                <p class="d-twilightend d-tetime"><--`${d-tetime}`--></p>
             </div>
             <div class="city2-data">
                 <div class="input-group mb-3">
@@ -88,13 +88,13 @@
                         <option value="3">Rome</option>
                     </select>
                 </div> 
-                <p class="current-time">Current time: `${ctime2}`</p>
-                <p class="sunrise">Sunrise: `${srtime2}`</p>
-                <p class="sunset">Sunset: `${sstime2}`</p>
-                <p class="solarnoon">Solar noon: `${sntime2}`</p>
-                <p class="daylength">Day length: `${dltime2}`</p>
-                <p class="twilightbeg">Twilight begins `${tbtime2}`</p>
-                <p class="twilightend">Twilight ends `${tetime2}`</p>
+                <p class="current-time ctime2">Current time: `${ctime2}`</p>
+                <p class="sunrise srtime2">Sunrise: `${srtime2}`</p>
+                <p class="sunset sstime2">Sunset: `${sstime2}`</p>
+                <p class="solarnoon sntime2">Solar noon: `${sntime2}`</p>
+                <p class="daylength dltime2">Day length: `${dltime2}`</p>
+                <p class="twilightbeg tbtime2">Twilight begins: `${tbtime2}`</p>
+                <p class="twilightend tetime2">Twilight ends: `${tetime2}`</p>
                 <div>
                     <iframe src="https://www.google.com/maps/search/?api=1&query=Girona"
                         class="map-frame"
@@ -109,9 +109,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="js/signup.js"></script>
-        <script src="js/user.js"></script>
-        <script src="js/database.js"></script>
-        <script src="js/validator.js"></script>
+        <script src="js/sunsetrise.js"></script>
 </body>
 </html>
