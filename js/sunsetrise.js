@@ -139,6 +139,26 @@ const cityLatLong = [{
 //   cityLon: 
 // }
 
+// Global variables to be used to calculate differences - City 1 -
+let sunRise1Kept;
+let sunSet1Kept;
+let solarNoon1Kept;
+let dayLength1Kept;
+let civilTwilightBegin1Kept;
+let civilTwilightEnd1Kept;
+// Global variables to be used to calculate differences - City 2 -
+let sunRise2Kept;
+let sunSet2Kept;
+let solarNoon2Kept;
+let dayLength2Kept;
+let civilTwilightBegin2Kept;
+let civilTwilightEnd2Kept; 
+// Global variables to be used to calculate differences - Between cities 1 & 2 -
+let diffSunRise;
+let diffSunSet;
+
+let isCity1Informed = false;
+let isCity2Informed = false;
 
 //const api = 'https://api.sunrise-sunset.org/json?lat=42.38&lng=3.15';
 async function getLatLon(lat, lon, city) {
@@ -150,6 +170,17 @@ async function getLatLon(lat, lon, city) {
   } else {
     await renderInfoCity2(apiList);
   }
+  //console.log("Sunrise2 value: " + sunRise2);
+  if (isCity1Informed && isCity2Informed) {
+    diffSunRise = await calculateDifferences(sunRise1Kept, sunRise2Kept);
+    diffSunSet = await calculateDifferences(sunSet1Kept, sunSet2Kept);
+    diffSolarNoon = await calculateDifferences(solarNoon1Kept, solarNoon2Kept);
+    diffDayLength = await calculateDifferences(dayLength1Kept, dayLength2Kept);
+    diffTwilightBeg = await calculateDifferences(civilTwilightBegin1Kept, civilTwilightBegin2Kept);
+    diffTwilightEnd = await calculateDifferences(civilTwilightEnd1Kept, civilTwilightEnd2Kept);
+    await renderDiff();  
+  }
+  
   return apiList;
 }
 
@@ -159,7 +190,7 @@ addCityListeners = () => {
   // https://stackoverflow.com/questions/24875414/addeventlistener-change-and-option-selection
   city1Input.addEventListener("change", handleCity1Input);
   city2Input.addEventListener("change", handleCity2Input);
-}
+};
 
 renderInfoCity1 = (apiListCity1) => {
   let sunRise1 = "Sunrise: " + apiListCity1.results.sunrise;
@@ -168,6 +199,14 @@ renderInfoCity1 = (apiListCity1) => {
   let dayLength1 = "Day length: " + apiListCity1.results.day_length;
   let civilTwilightBegin1 = "Twilight begins: " + apiListCity1.results.civil_twilight_begin;
   let civilTwilightEnd1 = "Twilight ends: " + apiListCity1.results.civil_twilight_end;
+  
+  sunRise1Kept = apiListCity1.results.sunrise;
+  sunSet1Kept = apiListCity1.results.sunset;
+  solarNoon1Kept = apiListCity1.results.solar_noon;
+  dayLength1Kept = apiListCity1.results.day_length;
+  civilTwilightBegin1Kept = apiListCity1.results.civil_twilight_begin;
+  civilTwilightEnd1Kept = apiListCity1.results.civil_twilight_end;
+
   //console.log("sunRise1", sunRise1);
   
   document.querySelector('.srtime1').innerText = sunRise1;
@@ -176,7 +215,8 @@ renderInfoCity1 = (apiListCity1) => {
   document.querySelector('.dltime1').innerText = dayLength1;
   document.querySelector('.tbtime1').innerText = civilTwilightBegin1;
   document.querySelector('.tetime1').innerText = civilTwilightEnd1;
-}
+  isCity1Informed = true;
+};
 
 renderInfoCity2 = (apiListCity2) => {
   let sunRise2 = "Sunrise: " + apiListCity2.results.sunrise;
@@ -186,13 +226,37 @@ renderInfoCity2 = (apiListCity2) => {
   let civilTwilightBegin2 = "Twilight begins: " + apiListCity2.results.civil_twilight_begin;
   let civilTwilightEnd2 = "Twilight ends: " + apiListCity2.results.civil_twilight_end;
 
+  sunRise2Kept = apiListCity2.results.sunrise;
+  sunSet2Kept = apiListCity2.results.sunset;
+  solarNoon2Kept = apiListCity2.results.solar_noon;
+  dayLength2Kept = apiListCity2.results.day_length;
+  civilTwilightBegin2Kept = apiListCity2.results.civil_twilight_begin;
+  civilTwilightEnd2Kept = apiListCity2.results.civil_twilight_end;
+
   document.querySelector('.srtime2').innerText = sunRise2;
   document.querySelector('.sstime2').innerText = sunSet2;
   document.querySelector('.sntime2').innerText = solarNoon2;
   document.querySelector('.dltime2').innerText = dayLength2;
   document.querySelector('.tbtime2').innerText = civilTwilightBegin2;
   document.querySelector('.tetime2').innerText = civilTwilightEnd2;
-}
+  isCity2Informed = true;
+};
+
+renderDiff = () => {
+  let sunRiseDiff = "<-- " + diffSunRise + "-->";
+  let sunSetDiff = "<--" + diffSunSet + "-->";
+  let solarNoonDiff = "<--" + diffSolarNoon + "-->";
+  let dayLengthDiff = "<--" + diffDayLength + "-->";
+  let twilightBegDiff = "<--" + diffTwilightBeg + "-->";
+  let twilightEndDiff = "<--" + diffTwilightEnd + "-->";
+
+  document.querySelector('.d-srtime').innerText = sunRiseDiff;
+  document.querySelector('.d-sstime').innerText = sunSetDiff;
+  document.querySelector('.d-sntime').innerText = solarNoonDiff;
+  document.querySelector('.d-dltime').innerText = dayLengthDiff;
+  document.querySelector('.d-tbtime').innerText = twilightBegDiff;
+  document.querySelector('.d-tetime').innerText = twilightEndDiff;
+};
 
 handleCity1Input = (event) => {
   const city1Input = event.target.value;
@@ -214,7 +278,7 @@ handleCity1Input = (event) => {
   getLatLon(cityLatLong[city1Index].cityLat, cityLatLong[city1Index].cityLon, 1);
   //console.log("Back from API: ", apiListCity1);
   //renderInfoCity1(apiListCity1);
-}
+};
 
 handleCity2Input = (event) => {
   const city2Input = event.target.value;
@@ -230,7 +294,65 @@ handleCity2Input = (event) => {
   getLatLon(cityLatLong[city2Index].cityLat, cityLatLong[city2Index].cityLon, 2);
 
   // renderInfoCity1(apiListCity1);
+};
+
+calculateDifferences = (time1, time2) => {
+  
+  var splitted = time1.split(' ');
+  var amPm1 = splitted[1];
+  var time = splitted[0].split(':');
+  var hour1 = time[0];
+  var min1 = time[1];
+  var sec1 = time[2];
+
+  splitted = time2.split(' ');
+  var amPm2 = splitted[1];
+  time = splitted[0].split(':');
+  var hour2 = time[0];
+  var min2 = time[1];
+  var sec2 = time[2];
+
+  if (amPm1 === 'PM') {
+    hour1 = parseInt(hour1) + 12;
+    //hour1 = hour1.toString();
+  }
+
+  if (amPm2 === 'PM') {
+    hour2 = parseInt(hour2) + 12;
+    //hour2 = hour2.toString();
+  }
+
+  hour1 = parseInt(hour1);
+  hour2 = parseInt(hour2);
+  min1 = parseInt(min1);
+  min2 = parseInt(min2);
+  sec1 = parseInt(sec1);
+  sec2 = parseInt(sec2);
+
+  var hour1sec = hour1 * 60 * 60 + min1 * 60 + sec1;
+  var hour2sec = hour2 * 60 * 60 + min2 * 60 + sec2;
+  var hourDiff = 0;
+
+  if (hour1sec > hour2sec) {
+    hourDiff = hour1sec - hour2sec;
+  } else {
+    hourDiff = hour2sec - hour1sec;
+  }
+
+  hourDiffTime = secondsToString(hourDiff);  
+  return hourDiffTime;
+};
+
+function secondsToString(seconds) {
+  var hour = Math.floor(seconds / 3600);
+  hour = hour < 10 ? '0' + hour : hour;
+  var minute = Math.floor((seconds / 60) % 60);
+  minute = minute < 10 ? '0' + minute : minute;
+  var second = seconds % 60;
+  second = second < 10 ? '0' + second : second;
+  return hour + ':' + minute + ':' + second;
 }
+
 
 // window.addEventListener("load", signup.addCityListeners());
 
