@@ -192,10 +192,16 @@ section > h1 {
 
 .map {
     border: 1mm solid #555555;
+    display: flex;
+    flex-direction: row;
 }
 
 .map, .map-frame1, .map-frame2 {
     background-color: #D9E4DD;
+}
+
+.map-frame1, .map-frame2 {
+    width: 60%;
 }
 
 /* Map ends */
@@ -302,14 +308,23 @@ section > h1 {
 
     .map {
         border: 1mm solid #555555;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .map-frame1, .map-frame2, .wiki-city1, .wiki-city2 {
+        width: 50%;
     }
 
     .map-frame1, .map-frame2 {
-        width: 80%;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 0%;
+        margin-top: 0%;
     }
 }
 
-@media (min-width: 376) and (max-width: 768px) { /* For tablet 768px*/
+@media (max-width: 768px) { /* For tablet 768px*/
     
     html {
         font-size: 8px;
@@ -328,6 +343,27 @@ section > h1 {
         margin-right: 2%;
     }
     
+    .nav-ul > li{
+        width: 20%;
+        display: none;
+    }
+
+    .btn {
+        color: black;
+        background-color: #cdc9c3;
+        font-size: 2rem;
+    }
+
+    .dropdown {
+        display: block;
+        padding-right: 10%;
+    }
+
+    .dropdown-menu, .dropdown-item {
+        background-color: #cdc9c3;
+        font-size: 2rem;
+    }
+
     .nav-ul {
         width: 78%;
     }
@@ -339,8 +375,9 @@ section > h1 {
         font-size: 2rem;
     }
 
-    .dropdown {
-        display: none;
+    section > h1 {
+        padding: 4% 10% 0% 10%;
+        text-align: center;
     }
 
     .form > input {
