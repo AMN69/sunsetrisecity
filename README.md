@@ -64,7 +64,7 @@ The **MVP** will cover the following:
 
 ### Git
 
-[Gihub Repo URL](https://github.com/AMN69/sunsetrisecity)
+[Gihub Repo URL](https://amn69.github.io/sunsetrisecity/)
 
 ### Sunrise Sunset
 
