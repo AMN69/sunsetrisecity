@@ -72,6 +72,11 @@ li {
 
     /* Form Sigup Signin starts */
 
+section > h1 {
+    display: flex;
+    justify-content: space-around;
+}
+
 .dropdown {
     display: none;
 }
@@ -243,6 +248,11 @@ li {
         font-size: 2rem;
     }
 
+    section > h1 {
+        padding: 4% 10% 0% 10%;
+        text-align: center;
+    }
+
     .form > input {
         margin: 5% 12.5%;
         height: 8%;
@@ -356,6 +366,7 @@ li {
     .main-div {
         display: flex;
         flex-direction: column;
+        
     }
     
     .city1-data, .city2-data {
