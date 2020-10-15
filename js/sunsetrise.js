@@ -409,15 +409,14 @@ function loadCities () {
   var node;
   var textnode;
   for (let i = 0; i < cityLatLong.length; i++) {
-    node = document.createElement("OPTION");
+    querySelected = document.querySelector('.city1');
+    node = document.createElement('option');
     console.log (node);
     node.setAttribute("value", cityLatLong[i].cityname);
     console.log (node);
     textnode = document.createTextNode(cityLatLong[i].cityname);
     console.log(textnode);
-    node.appendChild(textnode);
-    console.log(node);
-    //document.querySelector('.city').appendChild(node);    
+    querySelected.lastElementChild.appendChild(textnode);
   }
 }
 
