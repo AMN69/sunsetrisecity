@@ -4,7 +4,7 @@ class Validator {
 
     constructor () {
         this.invalidEmailError = "The email format is not valid.";
-        this.emailExistsError = "The email introduced exits already.";
+        this.emailExistsError = "The email introduced already exits.";
         this.passwordError = "Password must have 6 or more characters.";
         this.repeatPassError = "The password and repeated password must be the same.";
         

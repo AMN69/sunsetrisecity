@@ -206,12 +206,27 @@ section > h1 {
 }
 
 .map-frame1, .map-frame2 {
-    width: 60%;
+    width: 59%;
 }
 
 /* Map ends */
 
+/* Message container */
 
+.message-container {
+    margin: 1% 25%;
+    height: auto;
+    width: 50%;
+    font-size: 2rem;
+    color: red;
+    border: 1mm solid #555555;
+    text-align: center;
+    background-color: #D9E4DD;
+}
+
+.message-container > p {
+    background-color: #D9E4DD;
+}
 
 @media (max-width: 375px) { /* For mobile 375px */
     html {
