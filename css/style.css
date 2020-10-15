@@ -81,11 +81,11 @@ section > h1 {
     display: none;
 }
 
-.form-div, .faq-div {
+.form-div, .faq-div, .about-div {
     display: flex;
     flex-direction: column;
 }
-.form-h1, .faq-h1 {
+.form-h1, .faq-h1, .about-h1 {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -128,17 +128,22 @@ section > h1 {
     text-align: center;
 }
 
-.faq-answer {
+.faq-answer, .about-credits {
     display: flex;
     font-size: 1.5rem;
     justify-content: center;
     text-align: center;
 }
 
-.faq-answer-span {
-    display: inline;
-    /* justify-content: center;
-    flex-direction: row; */
+.about-article {
+    padding: 0% 10%;
+}
+
+.about-credits {
+    display: flex;
+    justify-content: left;
+    text-align: left; 
+    font-size: 2rem;
 }
 
     /* FAQ ends */
@@ -275,15 +280,9 @@ section > h1 {
         background-color: #CDC9C3;
     }
 
-    .faq-question, .faq-answer {
+    .faq-question, .faq-answer, .about-credits {
         width: 80%;
         margin-left: 10%;
-    }
-
-    .faq-answer-span {
-        display: inline;
-        /* justify-content: center;
-        flex-direction: row; */
     }
 
     .main-div {
@@ -321,6 +320,13 @@ section > h1 {
         align-items: flex-start;
         padding-top: 0%;
         margin-top: 0%;
+    }
+
+    .about-credits {
+        display: flex;
+        justify-content: left;
+        text-align: left; 
+        font-size: 1.5rem;
     }
 }
 
@@ -396,10 +402,6 @@ section > h1 {
         background-color: #CDC9C3;
     }
     
-    .faq-answer-span {
-        display: inline;
-    }
-
     .main-div {
         display: flex;
         flex-direction: column;

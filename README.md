@@ -20,10 +20,10 @@ The **MVP** will cover the following:
 
 ## Backlog
 
-- Bla1
-- Bla 2
-- Bla 3
-- ...
+- When the users clicks on a map a new browser tab should be opened showing the full map.
+- The current time should appear (API access to time zones by city).
+- There should be an option to change from UTC time to local time all the info.
+- It wouldn’t be possible to go directly to any page without previous autentication.
 
 ## Data Structure
 
@@ -36,7 +36,6 @@ The **MVP** will cover the following:
   - css/
     - style.css
   - js/
-    - main.js
     - signup.js
     - signin.js
     - sunsetriseApi.js
@@ -70,3 +69,7 @@ The **MVP** will cover the following:
 ### Sunrise Sunset
 
 [API web page](https://sunrise-sunset.org/api)
+
+### Here maps
+
+[Main web page](https://www.here.com/)
